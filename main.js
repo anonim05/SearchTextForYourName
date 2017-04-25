@@ -1,13 +1,15 @@
 
-var text = " fjdgfgjfj fjdjfjjh dfbhbbff myName fdhfh myName effd344 myName";
+var text = " fjdgfgjfj fjdjfjjh myNamo dfbhbbff myName fdhfh myName effd344 myName";
 
 var myName = "myName";
 var hits = [];
 
 for (var i = 0; i < text.length; i++) {
     if (text[i] === myName[0]) {
-        for (var j = i; j < (myName.length + i); j++) {
+        if(text.substr(i, myName.length) === myName) {
+            for (var j = i; j < (myName.length + i); j++) {
             hits.push(text[j]);
+            }
         }
     }
 }
